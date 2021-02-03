@@ -21,7 +21,8 @@ public class ArithmeticCalculator extends HttpServlet {
         
         String first = request.getParameter("first");
         String second = request.getParameter("second");
-        String result;
+        String result = "---";
+        String operation = request.getParameter("op");
         
         request.setAttribute("first", first);
         request.setAttribute("second", second);
@@ -39,8 +40,17 @@ public class ArithmeticCalculator extends HttpServlet {
             result = "invalid";
         }
         
-        else {
-            result = "Unknown";
+        else if(operation.equals("+")){
+            result = String.valueOf(Integer.parseInt(first) + Integer.parseInt(second));
+        }
+        else if(operation.equals("-")){
+            result = String.valueOf(Integer.parseInt(first) - Integer.parseInt(second));
+        }
+        else if(operation.equals("*")){
+            result = String.valueOf(Integer.parseInt(first) * Integer.parseInt(second));
+        }
+        else if(operation.equals("%")){
+            result = String.valueOf(Integer.parseInt(first) / Integer.parseInt(second));
         }
         
         request.setAttribute("result", result);

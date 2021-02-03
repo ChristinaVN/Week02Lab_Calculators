@@ -15,10 +15,10 @@
             <label>Second: </label>
             <input type="text" name="second" value="${second}">
             <br>
-            <button type="submit" name="add" formaction="arithmetic">+</button>
-            <button type="submit" name="sub" formaction="arithmetic">-</button>
-            <button type="submit" name="multi" formaction="arithmetic">*</button>
-            <button type="submit" name="div" formaction="arithmetic">%</button>
+            <input type="submit" name="op" value="+">
+            <input type="submit" name="op" value="-">
+            <input type="submit" name="op" value="*">
+            <input type="submit" name="op" value="%">
             <br>
             <br>
             <label>Result: ${result} </label>
